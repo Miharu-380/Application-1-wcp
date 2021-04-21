@@ -1,8 +1,10 @@
-<div class="success-flush">
-  <% if flash[:notice] %>
+
+<% if flash[:notice] %>
+  <div class="success-flush">
     <p><%= flash[:notice] %></p>
-  <% end %>
-</div>
+  </div>
+<% end %>
+
 <p>
   <strong>Title:</strong>
   <%= @book.title %>

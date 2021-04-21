@@ -52,7 +52,7 @@ div {
 }
 
 h2 {
-  margin: 10px auto;
+  margin: 15px auto;
 }
 
 label {
@@ -71,4 +71,13 @@ td {
 
 .success-flush {
   color: green;
+}
+
+.error-massage {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
 }
