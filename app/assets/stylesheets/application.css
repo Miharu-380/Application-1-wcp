@@ -69,6 +69,10 @@ td {
   padding-right: 5px;
 }
 
+.linkcolor {
+  color: black;
+}
+
 .success-flush {
   color: green;
 }
