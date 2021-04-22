@@ -20,7 +20,6 @@
 <% if @book.errors.any? %>
     <div class="error_massage">
       <h2><%= @book.errors.count %> prohibited this product from being saved:</h2>
-      
       <ul>
         <% @book.errors.full_messages.each do |message| %>
           <li><%= message %></li>
