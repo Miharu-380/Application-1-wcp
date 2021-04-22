@@ -10,12 +10,22 @@
     <td><%= book.body %></td>
     <td><%= link_to 'Show', book_path(book.id),class:"linkcolor" %></td>
     <td><%= link_to 'Edit', edit_book_path(book.id),class:"linkcolor" %></td>
-    <td><%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
+    <td><%= link_to "Destroy", book_path(book.id),class:"linkcolor",method: :delete, "data-confirm" => "Are you sure?" %></td>
   </tbody> 
   <% end %>
 </table>
 
 <h2>New book</h2>
+<% if @book.errors.any? %>
+  <div class="error_massage">
+    <h2><%= pluralize(@book.errors.count, "error") %> errors this product from being saved:</h2>
+    <ul><% @book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_with model:@book, local:true do |f| %>
 <div class="field">
   <%= f.label :title %>

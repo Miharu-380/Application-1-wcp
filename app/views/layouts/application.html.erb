@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
-    <% if flash[:notice] %>
+  <% if flash[:notice] %>
       <p id="successflush">
       <%= flash[:notice] %>
       </p>
     <% end %>
+<html>
   <head>
     <title>WebCampBackendNew</title>
     <%= csrf_meta_tags %>
